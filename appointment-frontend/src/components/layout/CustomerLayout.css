@@ -3,7 +3,7 @@
   flex-direction: column;
   min-height: 100vh;
   background: #f4f6fa;
-  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-family: "Segoe UI", system-ui, sans-serif;
 }
 
 /* Top Navbar */
@@ -124,7 +124,9 @@
   font-size: 0.9rem;
   font-weight: 500;
   color: #475569;
-  transition: background 0.15s, color 0.15s;
+  transition:
+    background 0.15s,
+    color 0.15s;
   white-space: nowrap;
 }
 
@@ -143,13 +145,57 @@
 /* Main content */
 .cl-main {
   flex: 1;
+  min-width: 0;
   padding: 2rem;
   overflow-y: auto;
 }
 
 @media (max-width: 768px) {
+  .cl-topbar {
+    padding: 0.65rem 1rem;
+    height: auto;
+    min-height: 56px;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .cl-topbar__brand {
+    font-size: 1.05rem;
+  }
+
+  .cl-body {
+    flex-direction: column;
+  }
+
   .cl-sidebar {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 0.5rem 1rem;
+  }
+
+  .cl-sidebar__title,
+  .cl-sidebar__footer {
     display: none;
   }
-}
 
+  .cl-sidebar__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0;
+  }
+
+  .cl-nav-link {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .cl-main {
+    padding: 1rem;
+    width: 100%;
+  }
+}

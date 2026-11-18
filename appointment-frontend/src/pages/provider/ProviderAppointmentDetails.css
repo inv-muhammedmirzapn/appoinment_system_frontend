@@ -75,6 +75,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .provider-details__mismatch-title {
@@ -264,5 +266,34 @@
 .provider-details__status-box--cancelled {
   background: #f8fafc;
   border-color: #e2e8f0;
+}
+
+@media (max-width: 640px) {
+  .provider-details__hero {
+    padding: 18px 20px;
+  }
+
+  .provider-details__hero-title {
+    font-size: 20px;
+  }
+
+  .provider-details__mismatch {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 14px 16px;
+  }
+
+  .provider-details__card {
+    padding: 16px;
+  }
+
+  .provider-details__row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .provider-details__row-label {
+    width: auto;
+  }
 }
 

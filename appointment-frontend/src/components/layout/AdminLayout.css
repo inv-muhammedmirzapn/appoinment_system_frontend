@@ -161,13 +161,85 @@
 /* Main content */
 .al-main {
   flex: 1;
+  min-width: 0;
   padding: 2rem;
   overflow-y: auto;
 }
 
 @media (max-width: 768px) {
+  .al-root {
+    flex-direction: column;
+  }
+
   .al-sidebar {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    position: static;
+  }
+
+  .al-sidebar__header {
+    padding: 0.75rem 1rem;
+  }
+
+  .al-sidebar__section-label {
     display: none;
+  }
+
+  .al-sidebar__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0.5rem 1rem;
+  }
+
+  .al-nav-link {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+
+  .al-sidebar__footer {
+    padding: 0.65rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .al-sidebar__id-label {
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+
+  .al-id-input {
+    width: 90px;
+  }
+
+  .al-topbar {
+    padding: 0.65rem 1rem;
+    height: auto;
+    min-height: 52px;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .al-topbar__title {
+    font-size: 1rem;
+  }
+
+  .al-topbar__right {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .al-badge {
+    white-space: nowrap;
+  }
+
+  .al-main {
+    padding: 1rem;
+    width: 100%;
   }
 }
 

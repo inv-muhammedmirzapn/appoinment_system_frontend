@@ -240,3 +240,38 @@
   color: #dc2626;
 }
 
+/* Basic Responsive Adjustments */
+@media (max-width: 768px) {
+  .admin-details {
+    padding: 4px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-details__hero {
+    padding: 18px 20px;
+  }
+
+  .admin-details__hero-title {
+    font-size: 20px;
+  }
+
+  .admin-details__card {
+    padding: 16px;
+  }
+
+  .admin-details__row {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .admin-details__row-label {
+    width: auto;
+  }
+
+  .admin-details__form-input {
+    width: 100%;
+    min-width: 0;
+  }
+}
+

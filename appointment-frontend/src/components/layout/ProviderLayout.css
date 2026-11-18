@@ -175,13 +175,86 @@
 /* Main content */
 .pl-main {
   flex: 1;
+  min-width: 0;
   padding: 2rem;
   overflow-y: auto;
 }
 
 @media (max-width: 768px) {
+  .pl-root {
+    flex-direction: column;
+  }
+
   .pl-sidebar {
+    width: 100%;
+    min-width: 0;
+    height: auto;
+    position: static;
+  }
+
+  .pl-sidebar__header {
+    padding: 0.75rem 1rem;
+  }
+
+  .pl-sidebar__subtitle,
+  .pl-sidebar__section-label {
     display: none;
+  }
+
+  .pl-sidebar__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0.5rem 1rem;
+  }
+
+  .pl-nav-link {
+    padding: 0.45rem 0.75rem;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+
+  .pl-sidebar__footer {
+    padding: 0.65rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .pl-sidebar__id-label {
+    margin-bottom: 0;
+    white-space: nowrap;
+  }
+
+  .pl-id-input {
+    width: 90px;
+  }
+
+  .pl-topbar {
+    padding: 0.65rem 1rem;
+    height: auto;
+    min-height: 52px;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .pl-topbar__title {
+    font-size: 1rem;
+  }
+
+  .pl-topbar__right {
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .pl-badge {
+    white-space: nowrap;
+  }
+
+  .pl-main {
+    padding: 1rem;
+    width: 100%;
   }
 }
 

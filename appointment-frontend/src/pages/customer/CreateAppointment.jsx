@@ -67,7 +67,7 @@ export default function CreateAppointment() {
   };
 
   return (
-    <div style={{ padding: '32px', maxWidth: '640px', margin: '0 auto' }}>
+    <div className="customer-container--narrow">
       {/* Page Header */}
       <div style={{ marginBottom: '28px' }}>
         <button
@@ -84,7 +84,7 @@ export default function CreateAppointment() {
       </div>
 
       {/* Form Card */}
-      <div className="customer-card" style={{ padding: '32px' }}>
+      <div className="customer-card customer-form-card">
         {serverError && (
           <div className="customer-alert customer-alert--error">
             {serverError}

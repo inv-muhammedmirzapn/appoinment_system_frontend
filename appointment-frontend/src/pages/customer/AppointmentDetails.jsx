@@ -141,7 +141,7 @@ export default function CustomerAppointmentDetails() {
   const isActionable = ACTIONABLE_STATUSES.includes(appt.status);
 
   return (
-    <div style={{ padding: '32px', maxWidth: '760px', margin: '0 auto' }}>
+    <div className="customer-container--detail">
       {/* Back button */}
       <button
         onClick={() => navigate('/customer/appointments')}
@@ -154,10 +154,7 @@ export default function CustomerAppointmentDetails() {
       {/* Detail Card */}
       <div className="customer-card">
         {/* Status Header */}
-        <div
-          className="customer-card__header"
-          style={{ background: '#f8fafc', padding: '24px 28px' }}
-        >
+        <div className="customer-card__header customer-detail-header">
           <div>
             <div style={{ fontSize: '0.78rem', color: '#94a3b8', fontWeight: 600, marginBottom: '6px' }}>
               APPOINTMENT #{appt.id}
@@ -170,7 +167,7 @@ export default function CustomerAppointmentDetails() {
         </div>
 
         {/* Details */}
-        <div style={{ padding: '0 28px' }}>
+        <div className="customer-detail-body">
           <DetailRow label="Description" value={appt.description || 'No description provided.'} />
           <DetailRow label="Scheduled At" value={appt.scheduled_at ? new Date(appt.scheduled_at).toLocaleString() : '—'} />
           <DetailRow label="Duration" value={appt.duration_minutes ? `${appt.duration_minutes} minutes` : '—'} />
@@ -179,7 +176,7 @@ export default function CustomerAppointmentDetails() {
         </div>
 
         {/* Actions */}
-        <div style={{ padding: '24px 28px', borderTop: '1px solid #f1f5f9' }}>
+        <div className="customer-detail-actions">
           {isActionable ? (
             <>
               {/* Cancel */}
