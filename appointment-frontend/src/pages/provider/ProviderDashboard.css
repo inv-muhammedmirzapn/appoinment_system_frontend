@@ -1,0 +1,329 @@
+.provider-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.provider-dashboard__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.provider-dashboard__title {
+  margin: 0 0 4px;
+  font-size: 26px;
+  color: #0f766e;
+  font-weight: 800;
+}
+
+.provider-dashboard__subtitle {
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.provider-dashboard__btn-refresh {
+  padding: 9px 18px;
+  background: #0f766e;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.15s ease;
+}
+
+.provider-dashboard__btn-refresh:hover {
+  background: #115e59;
+}
+
+/* Feedback alert */
+.provider-dashboard__alert {
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.provider-dashboard__alert--success {
+  background: #d1fae5;
+  color: #065f46;
+  border-color: #86efac;
+}
+
+.provider-dashboard__alert--error {
+  background: #fee2e2;
+  color: #dc2626;
+  border-color: #fca5a5;
+}
+
+/* Metrics grid */
+.provider-dashboard__metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.provider-dashboard__metric-card {
+  background: #ffffff;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  transition: all 0.15s ease;
+}
+
+.provider-dashboard__metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.provider-dashboard__metric-card--all {
+  border-color: #0f766e;
+  color: #0f172a;
+}
+.provider-dashboard__metric-card--all.active {
+  background: #0f766e;
+  color: #ffffff;
+}
+
+.provider-dashboard__metric-card--assigned {
+  border-color: #3b82f6;
+  color: #1e3a8a;
+}
+.provider-dashboard__metric-card--assigned.active {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+.provider-dashboard__metric-card--accepted {
+  border-color: #10b981;
+  color: #065f46;
+}
+.provider-dashboard__metric-card--accepted.active {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.provider-dashboard__metric-card--in_progress {
+  border-color: #8b5cf6;
+  color: #5b21b6;
+}
+.provider-dashboard__metric-card--in_progress.active {
+  background: #8b5cf6;
+  color: #ffffff;
+}
+
+.provider-dashboard__metric-card--completed {
+  border-color: #059669;
+  color: #064e3b;
+}
+.provider-dashboard__metric-card--completed.active {
+  background: #059669;
+  color: #ffffff;
+}
+
+.provider-dashboard__metric-value {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.provider-dashboard__metric-label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 4px;
+  opacity: 0.9;
+}
+
+/* Callout Banner */
+.provider-dashboard__callout {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 10px;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.provider-dashboard__callout-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.provider-dashboard__callout-text {
+  font-size: 14px;
+  color: #1e40af;
+  font-weight: 600;
+}
+
+.provider-dashboard__callout-btn {
+  padding: 6px 14px;
+  background: #2563eb;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Card & Table */
+.provider-dashboard__table-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.provider-dashboard__table-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.provider-dashboard__table-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.provider-dashboard__clear-filter {
+  background: none;
+  border: none;
+  color: #0f766e;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.provider-dashboard__table-scroll {
+  overflow-x: auto;
+}
+
+.provider-dashboard__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.provider-dashboard__table th {
+  padding: 12px 16px;
+  text-align: left;
+  color: #475569;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  background: #f8fafc;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.provider-dashboard__table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f5f9;
+  color: #475569;
+  vertical-align: middle;
+}
+
+.provider-dashboard__row--alt {
+  background: #f8fafc;
+}
+
+.provider-dashboard__empty-cell {
+  padding: 48px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 15px;
+}
+
+.provider-dashboard__id-cell {
+  font-weight: 700;
+  color: #0f766e;
+}
+
+.provider-dashboard__title-cell {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.provider-dashboard__nowrap {
+  white-space: nowrap;
+}
+
+.provider-dashboard__actions-cell {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+/* Action buttons */
+.provider-dashboard__btn-accept {
+  padding: 6px 12px;
+  background: #10b981;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.provider-dashboard__btn-reject {
+  padding: 6px 12px;
+  background: #ef4444;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.provider-dashboard__btn-start {
+  padding: 6px 12px;
+  background: #8b5cf6;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.provider-dashboard__btn-complete {
+  padding: 6px 12px;
+  background: #059669;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.provider-dashboard__btn-details {
+  padding: 6px 12px;
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+}
+
